@@ -1,0 +1,44 @@
+.container {
+  /*background: pink;*/
+  width: 900px;
+  color: #888;
+  font-size: 14px;
+  margin: 0 auto;
+  /*font-family: 'Redacted', arial;*/
+}
+
+.main {
+  display: flex;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  color: #888;
+  width: 100%;
+  padding: 40px 10px 5px 10px;
+  border-bottom: 1px solid #c1c1;
+  margin-bottom: 20px;
+}
+
+.content {
+  /*background: gray;*/
+  width: 60%;
+  padding: 0 10px;
+}
+
+.sidebar {
+ /*background: cyan;*/
+ width: 40%;
+ padding: 0 10px;
+}
+
+.btn {
+  /*color: black;*/
+  /*padding: 5px 30px;*/
+  /*line-height: 2.6;*/
+  /*background: black;*/
+}
