@@ -35,6 +35,7 @@
     <div class="main">
 
       <div class="content">
+
         <p><img class="responsive-img" src="https://res.cloudinary.com/demo/image/upload/dn_150,w_640,h_400/co_rgb:85715D,e_colorize:100/l_text:Futura_100:A,co_rgb:F0EDE8/sample.jpg"></p>
         
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -47,21 +48,46 @@
         <p><button class="button" data-open="exampleModal1">Virtual Try On</button></p>
 
         <div class="reveal text-center" id="exampleModal1" data-reveal>
-          
-          <a href="#link_1">
-            <img src="https://res.cloudinary.com/demo/image/upload/dn_150,w_170,h_250/co_rgb:85715D,e_colorize:100/l_text:Futura_100:A,co_rgb:F0EDE8/sample.jpg">
-          </a>
 
-          <a href="#link_2">
-            <img src="https://res.cloudinary.com/demo/image/upload/dn_150,w_170,h_250/co_rgb:85715D,e_colorize:100/l_text:Futura_100:A,co_rgb:F0EDE8/sample.jpg">
-          </a>
+          <div class="flip-card-modal-head">
+            <span>CHOOSE YOUR FIT</span>
+          </div>
 
-          <a href="#link_3">
-            <img src="https://res.cloudinary.com/demo/image/upload/dn_150,w_170,h_250/co_rgb:85715D,e_colorize:100/l_text:Futura_100:A,co_rgb:F0EDE8/sample.jpg">
-          </a>
+          <div class="flip-cards-container">
+            <div class="flip-card-wrapper">
+              <div class="flip-card">
+                <div class="flip-card-front" style="background-image: url(https://bulgari-scarf-demo.s3.eu-west-1.amazonaws.com/01_FOULARD.jpg);"></div>
+                <div class="flip-card-back" style="background-image: url(https://bulgari-scarf-demo.s3.eu-west-1.amazonaws.com/QRcode.png);">
+                  <span>IOS Only</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card-wrapper">
+              <div class="flip-card">
+                <div class="flip-card-front" style="background-image: url(https://bulgari-scarf-demo.s3.eu-west-1.amazonaws.com/02_FOULARD.jpg);"></div>
+                <div class="flip-card-back" style="background-image: url(https://bulgari-scarf-demo.s3.eu-west-1.amazonaws.com/QRcode.png);">
+                  <span>IOS Only</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card-wrapper">
+              <div class="flip-card">
+                <div class="flip-card-front" style="background-image: url(https://bulgari-scarf-demo.s3.eu-west-1.amazonaws.com/03_FOULARD.jpg);"></div>
+                <div class="flip-card-back" style="background-image: url(https://bulgari-scarf-demo.s3.eu-west-1.amazonaws.com/QRcode.png);">
+                  <span>IOS Only</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
+          </button>
+
+          <button class="flip-card-info" data-info aria-label="info" type="button">
+            <span aria-hidden="true">( i )</span>
           </button>
         </div>
 
@@ -102,8 +128,10 @@
     window.onload = function() {
       if (package_config) {
         console.log (package_config);
+
         if (package_config.ArEnabled) {
-          console.log("PACKAGE_CONFIG ARENABLED");  
+          console.log("PACKAGE_CONFIG ARENABLED");
+          console.log(package_config.ArResouces[0].qrCodeUrl);
         }
       } else {
         console.log("EMPTY_PACKAGE");
